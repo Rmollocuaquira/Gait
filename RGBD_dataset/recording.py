@@ -56,7 +56,7 @@ else:
 
 # Create a directory with the current time
 if args.directory is None:
-    name = datetime.now()
+    name = utils.current()
     if args.subject is not None:
         name = f'{name[:-1]}_id:{args.subject}_walk:{args.walk}/'
     directory = utils.checkFileExist(name, create=True)
